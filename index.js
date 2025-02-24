@@ -1,10 +1,15 @@
 // App.js
 const express = require('express');
 const bodyParser = require('body-parser');
-const aprendizRouter = require('./routes/aprendizRouter.js');
-const eventoRouter = require('./routes/eventoRouter.js');
 const cors = require('cors');
 const app = express();
+
+// Importar rutas del router
+const aprendizRouter = require('./routes/aprendizRouter.js');
+const eventoRouter = require('./routes/eventoRouter.js');
+const fichaRouter = require('./routes/fichaRouter.js');
+
+//control + d para seleccionar todas las palabras iguales
 
 app.use(bodyParser.json()); // for parsing application/json
 
@@ -18,6 +23,9 @@ app.use(cors({
 // Routes
 app.use('/', aprendizRouter);
 app.use('/', eventoRouter);
+app.use('/', fichaRouter);
+
+
 
 // start the server
 
