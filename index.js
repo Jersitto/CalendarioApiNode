@@ -8,6 +8,7 @@ const app = express();
 const aprendizRouter = require('./routes/aprendizRouter.js');
 const eventoRouter = require('./routes/eventoRouter.js');
 const fichaRouter = require('./routes/fichaRouter.js');
+const horarioRouter = require('./routes/horarioRouter.js');
 
 //control + d para seleccionar todas las palabras iguales
 
@@ -24,6 +25,7 @@ app.use(cors({
 app.use('/', aprendizRouter);
 app.use('/', eventoRouter);
 app.use('/', fichaRouter);
+app.use('/', horarioRouter);
 
 
 
