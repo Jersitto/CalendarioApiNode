@@ -8,10 +8,10 @@ const app = express();
 const aprendizRouter = require('./routes/aprendizRouter.js');
 const eventoRouter = require('./routes/eventoRouter.js');
 const fichaRouter = require('./routes/fichaRouter.js');
-const horarioRouter = require('./routes/horarioRouter.js');
+const horarioRouter = require('./routes/horarioRouter.js'); 
+const competenciaRouter = require('./routes/competenciaRouter.js');
 
 //control + d para seleccionar todas las palabras iguales
-
 app.use(bodyParser.json()); // for parsing application/json
 
 // Configurar CORS
@@ -26,7 +26,7 @@ app.use('/', aprendizRouter);
 app.use('/', eventoRouter);
 app.use('/', fichaRouter);
 app.use('/', horarioRouter);
-
+app.use('/competencia', competenciaRouter);
 
 
 // start the server
