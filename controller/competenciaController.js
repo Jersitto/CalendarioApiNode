@@ -1,4 +1,4 @@
-const CompetenciaModel = require('./model/competenciaModel.js');
+const competenciaModel = require('../model/competenciaModel.js');
 const { response } = require('express');
 
 //crear la clase para el controlador de competencia
@@ -14,11 +14,13 @@ class CompetenciaController {
             return;
         }
         //llamar el metodo del modelo
-        CompetenciaModel.obtenerPorId(id, (err, response) => {
+        competenciaModel.obtenerPorId(id, (err, response) => {
             if (err) {
+                console.error('Error:', err); // Log para debug
                 res.status(500).json({ error: 'No se pudo obtener la competencia' });
                 return;
             }
+            console.log('Respuesta:', response); // Log para debug
             res.json(response);
         });
     }

@@ -3,7 +3,7 @@ const router = express.Router();
 const competenciaController = require('../controller/competenciaController.js');
 
 //ruta para obtener una competencia por su id
-router.get('/competencias',  competenciaController.obtenerPorId);
+router.get('/competencia',  competenciaController.obtenerPorId);
 
 module.exports = router;
 

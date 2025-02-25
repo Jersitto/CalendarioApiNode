@@ -11,7 +11,7 @@ const fichaRouter = require('./routes/fichaRouter.js');
 const horarioRouter = require('./routes/horarioRouter.js'); 
 const competenciaRouter = require('./routes/competenciaRouter.js');
 
-//control + d para seleccionar todas las palabras iguales
+// Configurar body parser
 app.use(bodyParser.json()); // for parsing application/json
 
 // Configurar CORS
@@ -26,8 +26,7 @@ app.use('/', aprendizRouter);
 app.use('/', eventoRouter);
 app.use('/', fichaRouter);
 app.use('/', horarioRouter);
-app.use('/competencia', competenciaRouter);
-
+app.use('/', competenciaRouter); // Esta línea está correcta
 
 // start the server
 
