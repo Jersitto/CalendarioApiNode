@@ -12,6 +12,7 @@ const horarioRouter = require('./routes/horarioRouter.js');
 const competenciaRouter = require('./routes/competenciaRouter.js');
 const cursoRouter = require('./routes/cursoRouter.js');
 const saberesRouter = require('./routes/saberesRouter.js');
+const conocimientosRouter = require('./routes/conocimientosRouter.js');
 
 // Configurar body parser
 app.use(bodyParser.json()); // for parsing application/json
@@ -31,6 +32,7 @@ app.use('/', horarioRouter);
 app.use('/', competenciaRouter); 
 app.use('/', cursoRouter);
 app.use('/', saberesRouter);
+app.use('/', conocimientosRouter);
 // start the server
 
 const PORT = 3030;
