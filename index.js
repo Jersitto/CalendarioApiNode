@@ -10,6 +10,8 @@ const eventoRouter = require('./routes/eventoRouter.js');
 const fichaRouter = require('./routes/fichaRouter.js');
 const horarioRouter = require('./routes/horarioRouter.js'); 
 const competenciaRouter = require('./routes/competenciaRouter.js');
+const cursoRouter = require('./routes/cursoRouter.js');
+const saberesRouter = require('./routes/saberesRouter.js');
 
 // Configurar body parser
 app.use(bodyParser.json()); // for parsing application/json
@@ -26,8 +28,9 @@ app.use('/', aprendizRouter);
 app.use('/', eventoRouter);
 app.use('/', fichaRouter);
 app.use('/', horarioRouter);
-app.use('/', competenciaRouter); // Esta línea está correcta
-
+app.use('/', competenciaRouter); 
+app.use('/', cursoRouter);
+app.use('/', saberesRouter);
 // start the server
 
 const PORT = 3030;
