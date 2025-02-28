@@ -1,4 +1,4 @@
-const SaberesModel = require('../model/saberesModel');
+const SaberesModel = require('../model/saberesModel.js');
 const { response } = require('express');
 
 class SaberesController{
