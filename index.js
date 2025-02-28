@@ -13,6 +13,7 @@ const competenciaRouter = require('./routes/competenciaRouter.js');
 const cursoRouter = require('./routes/cursoRouter.js');
 const saberesRouter = require('./routes/saberesRouter.js');
 const conocimientosRouter = require('./routes/conocimientosRouter.js');
+const archivoRouter = require('./routes/archivoRouter.js');
 
 // Configurar body parser
 app.use(bodyParser.json()); // for parsing application/json
@@ -33,9 +34,10 @@ app.use('/', competenciaRouter);
 app.use('/', cursoRouter);
 app.use('/', saberesRouter);
 app.use('/', conocimientosRouter);
+app.use('/', archivoRouter);
 // start the server
 
-const PORT = 3030;
+const PORT = 3032;
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
