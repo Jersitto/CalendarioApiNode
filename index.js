@@ -14,6 +14,7 @@ const cursoRouter = require('./routes/cursoRouter.js');
 const saberesRouter = require('./routes/saberesRouter.js');
 const conocimientosRouter = require('./routes/conocimientosRouter.js');
 const archivoRouter = require('./routes/archivoRouter.js');
+const notificacionRouter = require('./routes/notificacionRouter.js');
 
 // Configurar body parser
 app.use(bodyParser.json()); // for parsing application/json
@@ -35,6 +36,7 @@ app.use('/', cursoRouter);
 app.use('/', saberesRouter);
 app.use('/', conocimientosRouter);
 app.use('/', archivoRouter);
+app.use('/', notificacionRouter);
 // start the server
 
 const PORT = 3032;
