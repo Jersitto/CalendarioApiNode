@@ -17,6 +17,7 @@ const archivoRouter = require('./routes/archivoRouter.js');
 const notificacionRouter = require('./routes/notificacionRouter.js');
 const faseRouter = require('./routes/faseRouter.js');
 const comentarioRouter = require('./routes/comentarioRouter.js');
+const muestraeventoRouter = require('./routes/muestraeventoRouter.js');
 
 // Configurar body parser
 app.use(bodyParser.json()); // for parsing application/json
@@ -41,6 +42,7 @@ app.use('/', archivoRouter);
 app.use('/', notificacionRouter);
 app.use('/', faseRouter);
 app.use('/', comentarioRouter);
+app.use('/', muestraeventoRouter);
 // start the server
 
 const PORT = 3032;
