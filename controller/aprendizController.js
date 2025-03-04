@@ -16,7 +16,7 @@ class AprendizController {
         //llamar el metodo del modelo
         aprendizModel.obtenerPorId(id, (err, response) => {
             if (err) {
-                res.status(500).json({ error: 'No se pudo obtener el aprendiz' });
+                res.status(500).json({ error: 'Failed to retrieve apprentice' });
                 return;
             }
             res.json(response);
@@ -28,7 +28,7 @@ class AprendizController {
         //llamar el metodo del modelo
         aprendizModel.obtenerTodos((err, response) => {
             if (err) {
-                res.status(500).json({ error: 'No se pudieron obtener los aprendices' });
+                res.status(500).json({ error: 'Failed to retrieve apprentices' });
                 return;
             }
             res.json(response);
@@ -49,7 +49,7 @@ class AprendizController {
         aprendizModel.obtenerPorNombre(nombre, (err, response) => {
             if (err) {
                 console.error('Error:', err); // Log para debug
-                res.status(500).json({ error: 'No se pudo obtener el aprendiz' });
+                res.status(500).json({ error: 'Failed to retrieve apprentice' });
                 return; // Add return to stop execution if error
             }
             console.log('Respuesta:', response); // Log para debug
@@ -79,7 +79,7 @@ class AprendizController {
 
         aprendizModel.insertarAprendiz(aprendiz, (err, response) => {
             if (err) {
-                res.status(500).json({ error: 'No se pudo insertar el aprendiz' });
+                res.status(500).json({ error: 'No se pudieron encontrar aprendices' });
                 return;
             }
             res.json(response);
@@ -123,7 +123,7 @@ class AprendizController {
         //llamar el metodo del modelo
         aprendizModel.actualizarAprendiz(id, aprendiz, (err, response) => {
             if (err) {
-                res.status(500).json({ error: 'No se pudo actualizar el aprendiz' });
+                res.status(500).json({ error: 'Failed to update apprentice' });
                 return;
             }
             res.json(response);
@@ -142,7 +142,7 @@ class AprendizController {
         //llamar el metodo del modelo
         aprendizModel.eliminarAprendiz(id, (err, response) => {
             if (err) {
-                res.status(500).json({ error: 'No se pudo eliminar el aprendiz' });
+                res.status(500).json({ error: 'Failed to delete apprentice' });
                 return;
             }
             res.json(response);

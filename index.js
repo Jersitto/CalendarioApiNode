@@ -24,7 +24,7 @@ app.use(bodyParser.json()); // for parsing application/json
 
 // Configurar CORS
 app.use(cors({
-    origin: 'http://localhost:3030', // Cambia esto al origen de tu aplicación cliente
+    origin: 'http://localhost:5173', // Cambia esto al origen de tu aplicación cliente
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
