@@ -18,6 +18,9 @@ const notificacionRouter = require('./routes/notificacionRouter.js');
 const faseRouter = require('./routes/faseRouter.js');
 const comentarioRouter = require('./routes/comentarioRouter.js');
 const muestraeventoRouter = require('./routes/muestraeventoRouter.js');
+const calendarioEventoRouter = require('./routes/calendarioeventoRouter.js');
+const dispositivomovilRouter = require('./routes/dispositivomovilRouter.js');
+const notificaciondeasistencia = require('./routes/notificaciondeasistenciaRouter.js');
 
 // Configurar body parser
 app.use(bodyParser.json()); // for parsing application/json
@@ -43,6 +46,11 @@ app.use('/', notificacionRouter);
 app.use('/', faseRouter);
 app.use('/', comentarioRouter);
 app.use('/', muestraeventoRouter);
+app.use('/', calendarioEventoRouter);
+app.use('/', dispositivomovilRouter);
+app.use('/', notificaciondeasistencia);
+
+
 // start the server
 
 const PORT = 3032;
