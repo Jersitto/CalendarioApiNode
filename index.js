@@ -21,6 +21,8 @@ const muestraeventoRouter = require('./routes/muestraeventoRouter.js');
 const calendarioEventoRouter = require('./routes/calendarioeventoRouter.js');
 const dispositivomovilRouter = require('./routes/dispositivomovilRouter.js');
 const notificaciondeasistencia = require('./routes/notificaciondeasistenciaRouter.js');
+const ProyectoRouter = require('./routes/proyectoRouter.js');
+const rapRouter = require('./routes/rapRouter.js');
 
 // Configurar body parser
 app.use(bodyParser.json()); // for parsing application/json
@@ -49,7 +51,8 @@ app.use('/', muestraeventoRouter);
 app.use('/', calendarioEventoRouter);
 app.use('/', dispositivomovilRouter);
 app.use('/', notificaciondeasistencia);
-
+app.use('/', ProyectoRouter);  // Ruta para Proyectos
+app.use('/', rapRouter);
 
 // start the server
 
