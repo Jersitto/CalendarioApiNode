@@ -23,6 +23,7 @@ const dispositivomovilRouter = require('./routes/dispositivomovilRouter.js');
 const notificaciondeasistencia = require('./routes/notificaciondeasistenciaRouter.js');
 const ProyectoRouter = require('./routes/proyectoRouter.js');
 const rapRouter = require('./routes/rapRouter.js');
+const recordatorioRouter = require('./routes/recordatorioRouter.js');
 
 // Configurar body parser
 app.use(bodyParser.json()); // for parsing application/json
@@ -53,6 +54,8 @@ app.use('/', dispositivomovilRouter);
 app.use('/', notificaciondeasistencia);
 app.use('/', ProyectoRouter);  // Ruta para Proyectos
 app.use('/', rapRouter);
+app.use('/', recordatorioRouter); // Ruta para Recordatorios
+
 
 // start the server
 
