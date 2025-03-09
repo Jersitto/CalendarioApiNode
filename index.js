@@ -25,6 +25,7 @@ const ProyectoRouter = require('./routes/proyectoRouter.js');
 const rapRouter = require('./routes/rapRouter.js');
 const recordatorioRouter = require('./routes/recordatorioRouter.js');
 const tematicaRouter = require('./routes/tematicaRouter.js');
+const sistemaAnaliticaRouter = require('./routes/sistemaAnaliticaRouter.js');
 
 // Configurar body parser
 app.use(bodyParser.json()); // for parsing application/json
@@ -57,6 +58,7 @@ app.use('/', ProyectoRouter);  // Ruta para Proyectos
 app.use('/', rapRouter);
 app.use('/', recordatorioRouter); // Ruta para Recordatorios
 app.use('/', tematicaRouter);
+app.use('/', sistemaAnaliticaRouter);
 
 
 // start the server

@@ -6,7 +6,7 @@ class TematicaController{
     static obtenerTodos(req, res){
         TematicaModel.obtenerTodos((err, response) => {
             if(err){
-                res.json(err);
+                return res.json(err);
             }
             res.json(response);
         });
@@ -16,12 +16,11 @@ class TematicaController{
     static obtenerPorId(req, res){
         const { id } = req.params;
         if(!id){
-            res.status(400).json({error: 'El campo id es requerido'});
-            return;
+            return res.status(400).json({error: 'El campo id es requerido'});
         }
         TematicaModel.obtenerPorId(id, (err, response) => {
             if(err){
-                res.json(err);
+                return res.json(err);
             }
             res.json(response);
         });
@@ -31,8 +30,7 @@ class TematicaController{
     static insertarTematica(req, res){
         const {tema, idRAP} = req.body;
         if(!tema || !idRAP){
-            res.status(400).json({error: 'Todos los campos son requeridos'});
-            return;
+            return res.status(400).json({error: 'Todos los campos son requeridos'});
         }
         const tematica = {
             tema,
@@ -40,7 +38,7 @@ class TematicaController{
         }
         TematicaModel.insertarTematica(tematica, (err, response) => {
             if(err){
-                res.json(err);
+                return res.json(err);
             }
             res.json(response);
         });
@@ -51,8 +49,7 @@ class TematicaController{
         const { id } = req.params;
         const {tema, idRAP} = req.body;
         if(!tema || !idRAP){
-            res.status(400).json({error: 'Todos los campos son requeridos'});
-            return;
+            return res.status(400).json({error: 'Todos los campos son requeridos'});
         }
         const tematica = {
             tema,
@@ -60,7 +57,7 @@ class TematicaController{
         }
         TematicaModel.actualizarTematica(tematica, id, (err, response) => {
             if(err){
-                res.json(err);
+                return res.json(err);
             }
             res.json(response);
         });
@@ -71,7 +68,7 @@ class TematicaController{
         const { id } = req.params;
         TematicaModel.eliminarTematica(id, (err, response) => {
             if(err){
-                res.json(err);
+                return res.json(err);
             }
             res.json(response);
         });
