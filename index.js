@@ -24,6 +24,7 @@ const notificaciondeasistencia = require('./routes/notificaciondeasistenciaRoute
 const ProyectoRouter = require('./routes/proyectoRouter.js');
 const rapRouter = require('./routes/rapRouter.js');
 const recordatorioRouter = require('./routes/recordatorioRouter.js');
+const tematicaRouter = require('./routes/tematicaRouter.js');
 
 // Configurar body parser
 app.use(bodyParser.json()); // for parsing application/json
@@ -55,6 +56,7 @@ app.use('/', notificaciondeasistencia);
 app.use('/', ProyectoRouter);  // Ruta para Proyectos
 app.use('/', rapRouter);
 app.use('/', recordatorioRouter); // Ruta para Recordatorios
+app.use('/', tematicaRouter);
 
 
 // start the server
