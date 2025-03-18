@@ -56,6 +56,26 @@ class EventoController {
         });
     }
 
+    // Método para obtener eventos por aprendiz_id
+static obtenerEventosPorAprendiz(req, res) {
+    const aprendizId = req.params.aprendizId;
+    
+    // Validar que el ID sea un número
+    if (!aprendizId || isNaN(parseInt(aprendizId))) {
+        res.status(400).json({ error: 'ID de aprendiz inválido' });
+        return;
+    }
+    
+    eventoModel.obtenerEventosPorAprendiz(aprendizId, (err, eventos) => {
+        if (err) {
+            console.error("Error al obtener eventos por aprendiz:", err);
+            res.status(500).json({ error: 'Error al obtener eventos' });
+            return;
+        }
+        res.json(eventos);
+    });
+}
+
     //metodo para insertar un evento
     static insertarEvento(req, res) {
         //obtener datos del body

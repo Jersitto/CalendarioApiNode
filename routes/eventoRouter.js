@@ -8,6 +8,8 @@ router.get('/evento', eventoController.obtenerPorId);
 router.get('/eventos', eventoController.obtenerTodos);
 //ruta para obtener un evento por su nombre
 router.get('/evento/nombre', eventoController.obtenerPorNombre);
+// Ruta para obtener eventos por aprendiz_id
+router.get('/eventos/aprendiz/:aprendizId', eventoController.obtenerEventosPorAprendiz);
 //ruta para insertar un evento
 router.post('/evento', eventoController.insertarEvento);
 //ruta para actualizar un evento

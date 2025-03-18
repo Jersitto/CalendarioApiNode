@@ -34,6 +34,17 @@ class EventoModel {
             callback(null, results);
         });
     }
+    // Método para obtener eventos por aprendiz_id
+static obtenerEventosPorAprendiz(aprendizId, callback) {
+    const query = 'SELECT * FROM evento WHERE aprendiz_id = ? AND eliminado = 0';
+    conn.query(query, [aprendizId], (err, results) => {
+        if (err) {
+            callback(err, null);
+            return;
+        }
+        callback(null, results);
+    });
+}
 
     //metodo para insertar un evento
     static insertarEvento(evento, callback) {
